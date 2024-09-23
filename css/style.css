@@ -1,0 +1,278 @@
+@import url("reset.css");
+
+@font-face {
+  font-family: "Roboto";
+  src: url("../fonts/Roboto-Medium.woff2") format("woff2"),
+    url("../fonts/Roboto-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("../fonts/Roboto-Bold.woff2") format("woff2"),
+    url("../fonts/Roboto-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("../fonts/Roboto-Regular.woff2") format("woff2"),
+    url("../fonts/Roboto-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("../fonts/Roboto-Black.woff2") format("woff2"),
+    url("../fonts/Roboto-Black.woff") format("woff");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+body {
+  font-family: "Roboto";
+  font-weight: 400;
+  font-size: 12px;
+  color: #fff;
+  background: #919090;
+}
+
+.container {
+  max-width: 1240px;
+  min-height: 760px;
+  padding: 0 15px;
+  margin: 0 auto;
+  height: 100vh;
+  background: url("../images/bg.jpg") no-repeat center center / cover fixed;
+  position: relative;
+}
+
+.inner-container {
+  width: 496px;
+  height: 760px;
+  background-color: rgba(233, 233, 233, 0.25);
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.inner-container-wrapper {
+  width: 340px;
+  margin: 0 auto;
+}
+
+.switch {
+  margin-top: 60px;
+}
+
+.switch input {
+  position: absolute;
+  z-index: -1;
+  width: 0;
+  height: 0;
+  opacity: 0;
+}
+
+.switch label {
+  display: flex;
+  cursor: pointer;
+  width: 340px;
+  height: 36px;
+  border: 1px solid #153416;
+  border-radius: 30px;
+  position: relative;
+}
+
+.switch label::before {
+  content: "";
+  position: absolute;
+  top: 1.1px;
+  left: 1px;
+  width: 50%;
+  height: 32px;
+  background: #153416;
+  border-radius: 30px;
+  transition: all 0.2s linear;
+}
+
+.switch input:checked + label::before {
+  left: calc(100% - 1px);
+  transform: translateX(-100%);
+}
+
+.switch label span {
+  flex: 1 1 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+h2 {
+  font-size: 30px;
+  margin-top: 75px;
+  text-align: center;
+}
+
+.email,
+.password {
+  width: 100%;
+  height: 44px;
+  border-radius: 30px;
+  background: #929191;
+  border: none;
+  padding: 0 20px 0;
+}
+
+.email {
+  margin-top: 29px;
+}
+
+.password {
+  margin-top: 15px;
+}
+
+.email::placeholder,
+.password::placeholder {
+  color: #fff;
+  padding-left: 20px;
+}
+
+.email:focus,
+.password:focus {
+  outline: none;
+
+  color: #fff;
+}
+
+.checkbox {
+  margin-top: 21px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.checkbox input {
+  position: absolute;
+  z-index: -1;
+  width: 0;
+  height: 0;
+  opacity: 0;
+}
+
+.checkbox label {
+  display: inline-block;
+  padding: 5px 5px 5px 30px;
+  position: relative;
+  cursor: pointer;
+}
+
+.checkbox label::before {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 0;
+  width: 15px;
+  height: 15px;
+  border: 1px solid #d9d9d9;
+}
+
+.checkbox input:checked + label::before {
+  background: #929191;
+}
+.checkbox input:checked + label::after {
+  content: "";
+  position: absolute;
+  top: 1px;
+  left: 4px;
+  width: 6px;
+  height: 12px;
+  border-bottom: 2px solid #fff;
+  border-right: 2px solid #fff;
+  transform: rotate(38deg);
+}
+
+.forgot-password {
+  color: #153416;
+  /* margin-left: 10px; */
+  white-space: nowrap;
+  text-decoration: none;
+}
+
+.forgot-password:hover {
+  text-decoration: underline;
+}
+
+.button {
+  margin-top: 30px;
+  cursor: pointer;
+  width: 100%;
+  height: 44px;
+  background: #153416;
+  border-radius: 30px;
+  color: #fff;
+}
+
+.account {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
+.account a {
+  color: #153416;
+  text-decoration: none;
+}
+
+.account a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+p {
+  margin-top: 30px;
+  color: #153416;
+  text-align: center;
+}
+
+.links-list {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.links-items-link {
+  display: block;
+  line-height: 1px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  margin-top: 20px;
+  fill: #153416;
+}
+
+.links-items-link-icon {
+  width: 20px;
+  height: 20px;
+  fill: #153416;
+}
+
+.links-items-link-icon:hover {
+  fill: #2b692d;
+  width: 25px;
+  height: 25px;
+}
